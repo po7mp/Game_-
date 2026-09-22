@@ -17,7 +17,7 @@
         BorderBrush="Black"
         BorderThickness="1"
         Margin="10"
-        Background="#FFFDFDFD">
+        Background="#FFFDFDFD" MouseDown="AttackEnemy">
 
                 <Grid>
                     <Image
