@@ -17,7 +17,7 @@
         BorderBrush="Black"
         BorderThickness="1"
         Margin="10"
-        Background="#FFFDFDFD" MouseDown="AttackEnemy">
+        Background="#FFFDFDFD" MouseDown="AttackPlayer">
 
                 <Grid>
                     <Image
@@ -62,11 +62,11 @@
                 </Grid>
             </Border>
             <Border
-        BorderBrush="Black"
+        BorderBrush="Black" MouseDown="AttackEnemy"
         BorderThickness="1"
         Margin="10"
         Background="#FFFDFDFD"
-        Grid.Column="1" MouseDown="AttackPlayer">
+        Grid.Column="1" >
                 <Grid>
                     <Image x:Name="enemyImage"
                 Margin="10,10,10.2,185.4"

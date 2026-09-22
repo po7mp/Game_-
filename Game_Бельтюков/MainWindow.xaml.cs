@@ -25,6 +25,8 @@ namespace Game_Бельтюков
         public List<Classes.PersonInfo> Enemys = new List<Classes.PersonInfo>();
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public Classes.PersonInfo Enemy;
+        //1вариант
+        DispatcherTimer playerAttackTimer = new DispatcherTimer();
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +38,33 @@ namespace Game_Бельтюков
             dispatcherTimer.Interval = new System.TimeSpan(0, 0, 10);
             dispatcherTimer.Start();
             SelectEnemy();
+            //1вариант
+            playerAttackTimer.Interval = TimeSpan.FromSeconds(3);
+            playerAttackTimer.Tick += PlayerAttack;
+            playerAttackTimer.Start();
 
+        }
+        //1вариант
+        private void PlayerAttack(object sender, EventArgs e)
+        {
+            if (Enemy != null)
+            {
+                Enemy.Health -= Convert.ToInt32(Player.Damage * 100f / (100f - Enemy.Armor));
+
+                if (Enemy.Health <= 0)
+                {
+                    Player.Glasses += Enemy.Glasses;
+                    Player.Money += Enemy.Money;
+
+                    UserInfoPlayer();
+                    SelectEnemy();
+                }
+                else
+                {
+                    enemyHealth.Content = "Жизненные показатели: " + Enemy.Health;
+                    enemyArmor.Content = "Броня: " + Enemy.Armor;
+                }
+            }
         }
         public void UserInfoPlayer()
         {
