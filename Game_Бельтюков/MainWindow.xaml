@@ -31,26 +31,31 @@
                 Margin="10, 0, 0, 160"/>
                     <Label
                 Content="Жизненные показатели: 100"
+                        x:Name="playerHealth"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 130"/>
                     <Label
                 Content="Броня: 100"
+                        x:Name="playerArmor"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 100"/>
                     <Label
                 Content="Уровень: 1"
+                        x:Name="playerLevel"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 70"/>
                     <Label
                 Content="Опыт: 0"
+                        x:Name="playerGlasses"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 40"/>
                     <Label
                 Content="Монеты: 0"
+                        x:Name="playerMoney"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 10"/>
@@ -64,9 +69,9 @@
         Grid.Column="1">
 
                 <Grid>
-                    <Image
+                    <Image x:Name="enemyImage"
                 Margin="10,10,10.2,185.4"
-                Source="Image/knight.png"/>
+                Source="Image/enemy.png"/>
                     <Label
                 Content="Основные характеристики персонажа:"
                 HorizontalAlignment="Left"
@@ -74,12 +79,12 @@
                 FontWeight="Bold"
                 Margin="10, 0, 0, 160"/>
                     <Label
-                Content="Жизненные показатели: 100"
+                Content="Жизненные показатели: 100" x:Name="enemyHealth"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 130"/>
                     <Label
-                Content="Броня: 100"
+                Content="Броня: 100" x:Name="enemyArmor"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10, 0, 0, 100"/>
